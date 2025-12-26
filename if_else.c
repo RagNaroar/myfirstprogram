@@ -1,24 +1,26 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "if_else.h"
 
-// int main(){
-//     int requiredXP = 1000;
-//     int playerXP = 1001;
+void block_1(){
+    int requiredXP = 1000;
+    int playerXP = 100;
+    int retake;
 
-//         if(playerXP >= requiredXP){
-//         int extraXP = playerXP - requiredXP;
-//         printf("You leveled up! You have %d extra XP\n", extraXP);
-//         printf("lets go to the next level\n");
-//     }else{
-//         int needXP = requiredXP - playerXP;
-//         printf("You need %d more XP to level up\n", needXP);
-//         printf("keep grinding\n");
-//     }
-//     return 0;
+        if(playerXP >= requiredXP){
+        int retake = playerXP - requiredXP;
+        printf("You leveled up! You have %d extra XP\n", retake);
+        printf("lets go to the next level\n");
+    }else{
+        int needXP  = requiredXP - playerXP;
+        printf("You need %d more XP to level up\n", needXP);
+        printf("keep grinding\n");
+    }
+    
 
-// }
+}
 
-int main(){
+void block_2(){
     int requireAge = 18;
     int userAge;
     scanf("%d", &userAge);
@@ -28,9 +30,9 @@ int main(){
         printf("тебе нету даже %d, иди домой\n", requireAge);
     }
     //тут научился использовать system("clear") наконец то емае
-    printf("Press Enter to clear the screen...");
+    printf("нажми на Enter чтобы очистить экран\n");
     getchar();
     getchar();
     system("clear");
-    return 0;
+    
 }
